@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+  <title>p0w2 technical</title>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/default.css">
+</head>
+
+<header>
+    <div class="headerbar">
+      <div class="home">
+        <a href="../index.html">Peter Rosal, Developer in Training</a>
+      </div>
+      <div class="navbar">
+        <nav>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="index.html">Blog</a></li>
+            <li><a href="mailto:peter.rosal@gmail.com">Contact</a></li>
+          </ul>
+        </nav>  
+      </div>  
+    </div>
+  </header>
+  <div class="space">
+  </div>
+  
+<main>
+  <h1>Classes vs IDs</h1>
+  <h2>Being a Part of a Group and Being Yourself</h2>
+  <h4>July 20, 2015</h4>
+
+  <section>
+    <p>
+        Growing up we are taught to share, be nice, play together, etc. Basically to integrate us with our peers. But the end of the day we can be a completely unique person from the same kids in our class. This is kind of the idea of how we can style in CSS.
+    </p>
+    <p>
+        The class selector specifies what attributes to style elements of that class. The class can be multiple elements that you want to share the same styling. If they are part of that class, they will have that style. CSS stands for Cascading Style Sheets. So although, an element may be part of that class, if there is another conflicting style rule more specific that just the class, it will take precedence. Also, if you duplicate the same class rule later in your sheet, the conflicting rule of the latter will take precedence.
+    </p>
+    <p>
+        The id selector is simliar in that you can select which elements get that specific style, except that there should only be one id per page. So only one element should be tagged with the id you created. You can create as many as you want as long as it applies to just one element on that particular page. Again, styles will cascade down. 
+    </p>
+    <p>
+        Naming classes and ids, we want to start with a letter or underscore. Never a number.
+    </p>
+    <p>
+        Type . followed by the class to start the rule: 
+    <br />
+        .classname {<br />
+          color: blue;<br />
+        }
+        
+    <p>
+        Type # followed by the id given to start the rule: 
+
+        <br />#idprovided {
+        <br />color: red;
+        <br />}
+    </p>
+    <p>
+        Best practices dictate that you shouldn't have written any irrelevant rules, ones that don't get applied to anything on the page. Also, with ids, referencing the specific tag and the id as the key in the rule is unnecessary. With classes, you can make the class name referencing the specific tag. Specificity and efficiency are key.
+    </p>
+    <p>
+        Buzz cuts were the norm for me growing up on the playground. I think kids today have the Beiber. Either way, style as you please! You can make a group of your elements the same or as unique as possible.
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+<footer>
+  &copy; 2015 Peter Rosal Productions
+</footer>
