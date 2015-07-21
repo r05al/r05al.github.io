@@ -62,13 +62,18 @@ header {
 	font-size: 16pt;
 }
 
+#profile {
+	width: 150px;
+	height: 150px;
+}
+
 .space {
 	height: 60px;
 }
 
 
 
-section, figure {
+section, figure, main {
 	margin-left: 12px;
 	padding: 12px;
 }
