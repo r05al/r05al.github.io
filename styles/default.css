@@ -1,58 +1,66 @@
-body {
-	color: #ffffff;
-	background-color: #3d3a37;
-	padding: 0px;
-	margin:0px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-
-header {
-	position: fixed;
-	display: block;
-	width: 100%;
-	height: 32px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-weight: normal;
-	background-color: black;
+* {
 	margin: 0;
 	padding: 0;
 }
 
-.headerbar {
-	width: 100%;
-	margin: 0px auto 0px auto;
+a {
+	text-decoration: none;
+	color: black;
+}
+body {
+
+	color: #1d1d1d;
+	background-color: ##f8f8f8;
+	padding: 0px;
+	margin:0px;
+	font-family: 'Ropa Sans', sans-serif;
+	font-size: 12px;
 }
 
-.home a {
+header {
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	position: fixed;
+	width: 100%;
+}
+
+#headerbar {
+	background: #E9E9E9;
+	color: #1d1d1d;
+	height: 32px;
+	margin: 0px auto 0px auto;
+	border-bottom: 1px solid black;
+	padding-top: 11px;
+}
+
+#home {
 	float: left;
 	margin-left: 32px;
 	font-weight: bold;
 	display: inline;
 	height: 32px;
-	line-height: 200%;
-
+	line-height: 100%;
+	width: 30%;
+	font-size: 32pt;
+	font-family: 'Oswald';
 }
 
-.navbar {
+#navbar {
 	float: right;
-	height: 32px;
-}
-
-nav {
-	float: right;
-	color: #ffffff;
+	width: 60%;
 	margin-right: 32px;
 }
 
-nav li {
+#navbar ul {
+	float: right;
+}
+
+#navbar li {
+	position: relative;
 	display: inline;
+	padding-right: 6px;
+	font-size: 16pt;
 }
-
-a {
-	text-decoration: none;
-	color: #ffffff;
-}
-
 
 .space {
 	height: 60px;
@@ -60,11 +68,54 @@ a {
 
 
 
-section, main {
+section, figure {
 	margin-left: 12px;
+	padding: 12px;
 }
 
 #clock {
 	width: 100px;
 	height: 100px;
 }
+
+#cp {
+	position: absolute;
+	left: 32px;
+	top: 0px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #E9E9E9;
+	border-top: 1px solid black;
+	height: 24px;
+	letter-spacing: 2px;
+	font-size: 12px;
+	font-weight: bold;
+	padding-top: 11px;
+}
+
+#footersocs {
+	width: 100%;
+	text-align: right;
+}
+
+#footersocs ul {
+	list-style: none;
+	margin-right: 32px;
+}
+
+#footersocs li {
+	padding: 0 6px;
+	display: inline;
+}
+
+.containersize {
+	position: relative;
+	width: auto;
+
+}
+
