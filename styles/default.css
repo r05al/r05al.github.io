@@ -7,6 +7,10 @@ a {
 	text-decoration: none;
 	color: black;
 }
+
+p {
+	margin: 10px;
+}
 body {
 
 	color: #1d1d1d;
@@ -14,7 +18,7 @@ body {
 	padding: 0px;
 	margin:0px;
 	font-family: 'Ropa Sans', sans-serif;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 header {

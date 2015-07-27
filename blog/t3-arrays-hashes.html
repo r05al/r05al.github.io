@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<head>
+  <title>p0w3 technical</title>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../styles/default.css">
+<link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Economica|News+Cycle|Ropa+Sans|Actor|Cuprum|Oswald' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <div id="headerbar">
+      <div class="containersize">
+        <div id="home">
+          <a href="../index.html">Rosal, Peter</a>
+        </div>
+        <div id="navbar">
+          <nav>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Work</a></li>
+              <li><a href="index.html">Blog</a></li>
+              <li><a href="mailto:peter.rosal@gmail.com">Contact</a></li>
+            </ul>
+          </nav> 
+        </div>  
+      </div>
+    </div>
+  </header>
+<div class="space">
+</div>
+  
+<main>
+  <h1>Arrays vs Hashes</h1>
+  <h2>[] vs {}</h2>
+  <h4>July 27, 2015</h4>
+
+  <section>
+    <p>
+        Per ruby-doc.org, "Arrays are ordered, integer-indexed collections of any object.
+        Array indexing starts at 0, as in C or Java. A negative index is assumed to be relative to the end of the array---that is, an index of -1 indicates the last element of the array, -2 is the next to last element in the array, and so on." What this means is each object within the [ ] separated by a comma, is accessible via their respective index number. In most languages, the number begins with 0 and increments upwards. If you use a -1 and decrement down, this references the last object in the array and moves toward the beginning. See below. Rather than using the numerical values listed in the sample array, these can be any objects like strings, numbers, boolean, or created classes. To access the object simply reference it resepctive order number. In the example using an array with five objects, to reference the 3rd it would either be <code>sample_array[2] || sample_array[-3]</code>.
+    </p>
+    <p>
+        <code>sample_array = [0,1,2,3,4]</code><br><code>sample_array_neg = [-5,-4,-3,-2,-1]</code>
+    </p>
+    <p>
+        Per ruby-doc.org, "A Hash is a dictionary-like collection of unique keys and their values. Also called associative arrays, they are similar to Arrays, but where an Array uses integers as its index, a Hash allows you to use any object type.
+        Hashes enumerate their values in the order that the corresponding keys were inserted." This is fairly self explanitory. Hashes you don't need to use the default indexing of numbers that array utilizes. You can create your own and assign them to your objects. In the below example, you don't need to know its position, just call its key to access the assigned value. <code>sample_hash['third']</code> will result in accessing the string below.
+    </p>
+    <p>
+        <code>sample_hash = Hash.new<br>sample_hash['third'] = "there really isn't a third, or number ordering in hashes"</code>
+    </p>
+    <p>
+        So depending on how easily you want to track your stored collection of objects, you can go either route. Arrays are more efficient in terms of accessing, where hashes are more flexible in terms of assignment to access.
+    </p>
+
+      <!-- copy and paste as many sections as you want to add paragraphs -->
+  </section>
+</main>
+<footer>
+  <div class="containersize">
+    <div id="cp">&copy; 2015 Rosal Productions</div>
+    <nav id="footersocs">
+      <ul>
+        <li><a href="https://www.facebook.com/peterosal">Facebook</a></li>
+        <li><a href="https://instagram.com/x21b">Instagram</a></li>
+        <li><a href="https://twitter.com/n01nobody">Twitter</a></li>
+      </ul>
+    </nav>
+
+</footer>
+</html>
