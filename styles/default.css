@@ -10,6 +10,7 @@ a {
 
 p {
 	margin: 10px;
+	line-height: 150%;
 }
 body {
 
@@ -126,5 +127,11 @@ footer {
 	position: relative;
 	width: auto;
 
+}
+
+fieldset {
+	width: 60%;
+	line-height: 20px;
+	padding: 6px;
 }
 

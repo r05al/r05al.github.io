@@ -2,12 +2,11 @@
 <html lang="en-US">
 <head>
 	<meta charset="utf-8">
-	<title>Developer in Training</title>
+	<title>Contact Form</title>
   <link rel="stylesheet" type="text/css" href="styles/default.css">
   <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Economica|News+Cycle|Ropa+Sans|Actor|Cuprum|Oswald' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
   <header>
     <div id="headerbar">
       <div class="containersize">
@@ -27,36 +26,61 @@
       </div>
     </div>
   </header>
-	<div class="space">
-  </div>
-  <div class="content">
-  </div>
-  <figure>
-  	<img id="profile" src="imgs/profile.jpg" alt="Profile Picture" title="Peter Rosal 2015" />
-  	<p>
-  		<figcaption>
-  		Hi! I'm Peter, Pete, Petey, Pistol, Petri, Peeta, Pan, and the list goes on.
-  		</figcaption>
-  	</p>		
-  </figure>
-  <section>
-    <h1>New York Mud Turtles 2015</h1>
-  </section>
+<div class="space">
+</div>
   
   <section>
-    <h1>Phase 0</h1>
+    <h1>Contact Form</h1>
     
     <section>
-      <h1>This site will be a work in progress. As I learn more the better and cleaner this will become!</h1>
+      <h1>Please fill out the below.</h1>
     </section>
   </section>
-  
   <section>
-    <h2>Phase 1 Countdown</h2>
-    <img id="clock" src="imgs/clock.jpg" alt="Clock" title="Waiting for the real fun to begin!" />
-    <h3>Insert timer here</h3>
+    <form action=# method="get">
+      <fieldset>
+        <legend>
+          Your Info:
+        </legend>
+        <label>
+          Name:
+          <input type="text" name="name" size="30" maxlength="100">
+        </label>
+        <br />
+        <label>
+          Email:
+          <input type="email" name="email" size="30" maxlength="100">
+        </label>
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend>
+          Your Insight:
+        </legend>
+        <p>
+          <label for ="refer">
+            How were you directed to my site?
+          </label>
+          <select name="referrer" id="refer">
+            <option value="google">Google</option>
+            <option value="cohort">Cohort</option>
+            <option value="friend">Friend</option>
+            <option value="other">Other</option>
+          </select>
+        </p>
+        <p>
+          <label for="comments">
+            Comments:
+          </label>
+          <br />
+          <textarea rows="6" cols="60" id="comments">
+          </textarea>
+        </p>
+        <br />
+        <input type="submit" value="Submit Info" />
+      </fieldset>
+    </form>
   </section>
-
 </body>
 <footer>
   <div class="containersize">
@@ -72,4 +96,3 @@
 
 </footer>
 </html>
-
