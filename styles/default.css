@@ -136,6 +136,33 @@ footer {
 
 }
 
+table, tr, td {
+    border: 1px black solid;
+}
+
+table {
+    margin: 0.5em;
+    width: 100%;
+}
+
+th {
+    background-color: #87CEFA;
+    text-align: left;
+}
+td {
+    background-color: gray;    
+
+}
+
+.code_example {
+    width: 128px;
+}
+
+.code_explanation {
+    width: 60%;
+}
+
+
 fieldset {
 	width: 60%;
 	line-height: 20px;
