@@ -1,7 +1,7 @@
 
 (function() {
 
-var expiryMsg, today, elEnds;
+var expiryMsg, today, elEnds, difference;
 
 function offerExpires(today) {
 	var weekFromToday, day, date, month, year, dayNames, monthNames;
@@ -14,9 +14,15 @@ function offerExpires(today) {
 	date = weekFromToday.getDate();
 	month = monthNames[weekFromToday.getMonth()];
 	year = weekFromToday.getFullYear();
+	difference = weekFromToday.getTime() - today.getTime();
+	difference = difference/(1000*60*60*24);
 	expiryMsg = 'Phase 1 begins ';
-	expiryMsg += day + ' <br />(' + date + ' ' + month + ' ' + year + ') <br />' + 
-	weekFromToday.toTimeString();
+	expiryMsg += day + ' <br />' + month + ' ' + date + ', ' + year + '<br />' + 
+	weekFromToday.toTimeString() + '<br />' + 'COUNTDOWN' +
+	'<br />' + Math.floor(difference) + ' days ' + 
+	Math.floor(difference%1 *24) + ' hours ' + Math.floor(((difference%1 *24)%24 * 60)%60) + ' minutes ' +
+	Math.floor(((((difference%1 *24)%24 * 60)%60) * 60)%60) + ' seconds.';
+	
 	return expiryMsg;
 }
 

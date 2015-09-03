@@ -4,3 +4,10 @@ function updateMessage() {
 	el.textContent = msg;
 }
 updateMessage();
+var updatemsg = '<p><b>page title: </b>' + document.title + '</br />';
+updatemsg += '<b>page address: </b>' + document.URL + '<br />';
+updatemsg += '<b>last modified: </b>' + document.lastModified + '</p>';
+
+var elupdate = document.getElementById('footer');
+elupdate.innerHTML = updatemsg;
+

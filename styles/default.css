@@ -15,6 +15,7 @@ code {
 p {
 	margin: 10px;
 	line-height: 150%;
+	text-align: justify;
 }
 body {
 
@@ -23,8 +24,22 @@ body {
 	padding: 0px;
 	margin:0px;
 	font-family: 'Ropa Sans', sans-serif;
-	font-size: 14px;
+	font-size: 90%;
 	min-width: 810px;
+	line-height: 1.8;
+}
+
+h1 { 
+
+	font: normal 2em 'Ropa Sans', sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
+}
+
+h3 { 
+	font: italic normal 1.4em georgia, sans-serif;
+	letter-spacing: 1px; 
+	margin-bottom: 0; 
 }
 
 header {
@@ -32,6 +47,11 @@ header {
 	text-transform: uppercase;
 	position: fixed;
 	width: 100%;
+}
+
+#side-ul {
+	margin-left: 3em;
+	
 }
 
 #headerbar {
@@ -176,4 +196,9 @@ fieldset {
     height: 25px;
     width: 25px;}
 .false {
-    background-position: 0 -25px;}
+    background-position: 0 -25px;
+}
+
+#game {
+	margin-left: 2em;
+}
