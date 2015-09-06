@@ -1,7 +1,7 @@
 var username;
 var message;
 username = 'Phase 1***';
-message = 'See our upcoming projects';
+message = '';
 
 var elName = document.getElementById('name');
 elName.textContent = username;

@@ -75,7 +75,7 @@ cure = new Tools("cure", "apply it", 1, Infinity, "WIN", "WIN");
 var boy = {
   name: "Charlie",
   age: 4,
-  health: 200,
+  health: 60,
   weight: 40,
   items: [helmet],//["helmet"],
   grab: grab,
@@ -118,7 +118,7 @@ function bag() {
     var duffle = [];
     for(var i=0; i<this.items.length; i++)
         duffle.push(this.items[i].name);
-    return duffle.join(", ");
+    duffle.join(", ");
 }
 
 function grab(thingy) {
@@ -157,9 +157,11 @@ function hp(item, thingy) {
   var string = '';
   while (this.health > 0 && obstactles[thingy].health > 0) {
     if (Math.round(Math.random()) < 1) {
+
+      this.health = this.health - strike;
       var health = document.getElementById('health');
       health.textContent = "Your HP: " + this.health;
-      this.health = this.health - strike;
+      $('#yhealth').css({width: this.health});
       string = ("You were struck by its " + obstactles[thingy].items[Math.round(Math.random())] + "!");
       alert(string);
       var defense = document.getElementById('defense');
@@ -168,6 +170,7 @@ function hp(item, thingy) {
     else {
       if (Math.round(Math.random()) < item.chance) {
         obstactles[thingy].health = obstactles[thingy].health - yourStrike;
+        $('#ehealth').css({width: obstactles[thingy].health});
         string = ("You " + item.good + "!");
         alert(string);
         var attack = document.getElementById('attack');
@@ -187,9 +190,14 @@ function hp(item, thingy) {
 }
 
 function search() {
+  location.reload(true);
   
   for(var i=0; i < cross.length; i) {
     var num = Math.floor(Math.random()*epic.length);
+    // $(document).ready(function(){
+    //   $('#placeImg').html("<img src=" + images[num] + ">");
+    //   //$('#document').css({background-image: "<img src=" + images[num] + ">"});
+    // })
     var place = epic[num] + "...";
     alert(place);
     var where = document.getElementById('where');
@@ -211,17 +219,19 @@ function search() {
       else 
         alert("You have defeated " + obstactles[thingy].name + "!");
     }
-    else if (thingy == cure) {
-      alert("You found a " + thingy.name + "!");
-      alert("You have the cure! The day is won!");
-      return;
-    }
     else {
+      
       alert("You found a " + thingy.name + "!");
       this.grab(thingy);
+        if (thingy == cure) {
+          alert("You found a " + thingy.name + "!");
+          alert("You have the cure! The day is won!");
+          return;
+        }
 
     }
   }
+
 }
 
 var epic = ["You journey through a forest", "You enter a factory", "You come across a college campus",
@@ -234,10 +244,11 @@ var images = ["imgs/forest.jpg", "imgs/factory.jpg", "imgs/campus.jpg", "imgs/su
 "imgs/mall.jpg", "imgs/carrier.jpg", "imgs/office.jpg", "imgs/library.jpg", "imgs/pool.jpg", "imgs/road.jpg"];
 
 
-$(document).ready(function(){
-  $('#where').attr('img', '../imgs/forest.jpg')
-  })
+// $(document).ready(function(){
+//   $('#placeImg').html("<img src=" + images[0] + ">");
+// })
 // boy.search();
+// $('#print').html();
 
 // boy.toss(lightningBolt);
 // boy.fight(legos,"throw");

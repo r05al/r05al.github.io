@@ -1,6 +1,6 @@
 var today = new Date();
 var hourNow = today.getHours();
-var minNow = today.getMinutes();
+var minNow = today.getMinutes() < 10 ? "0" + today.getMinutes() : today.getMinutes();
 var greeting;
 
 if (hourNow > 18) {

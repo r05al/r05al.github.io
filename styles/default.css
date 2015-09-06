@@ -202,3 +202,37 @@ fieldset {
 #game {
 	margin-left: 2em;
 }
+
+#yhealth{
+	height: 1em;
+	width: 25%;
+	background-color: green;
+	border: 1px solid black;
+}
+
+#ehealth{
+	height: 1em;
+	width: 25%;
+	background-color: blue;
+	border: 1px solid black;
+}
+
+#message {
+
+}
+
+#offerEnds {
+	line-height: 1.4em;
+	font-size: 1.2em;
+	margin-top: .2em;
+	margin-left: 1.4em;
+}
+
+#cohort {
+	font-size: 3em;	
+	font-weight: bold;
+}
+
+#placeImg {
+	width: 4em;
+}

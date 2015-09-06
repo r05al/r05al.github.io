@@ -3,7 +3,7 @@ var course = {
 	unit: 2,
 	week: 6,
 	printProgress: function() {
-		return this.phase + ' Unit ' + this.unit + ':week ' + this.week;
+		return this.phase + ':';
 	}
 };
 

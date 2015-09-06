@@ -7,4 +7,4 @@ quantity = 14;
 total = price * quantity;
 
 var el = document.getElementById('cost');
-el.textContent = '#' + total;
+el.textContent = '';
