@@ -23,3 +23,26 @@ function myFunction() {
 
 </body>
 </html>
+
+require 'prime'
+
+
+generator = Prime::Generator23.new
+oval = 125
+value = oval
+
+prime_factors = []
+generator.each do |i|
+    p i
+    factor, rem = value.divmod(i)
+    p factor
+    p rem
+    if rem == 0
+        prime_factors << Array.new(Math.exp / i , i)
+        value = value / i
+    end
+    break if i >= oval
+    p prime_factors
+end
+
+p prime_factors
