@@ -1,88 +1,357 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<title>Developer in Training</title>
-  <link rel="stylesheet" type="text/css" href="styles/default.css">
-  <link href='http://fonts.googleapis.com/css?family=Sorts+Mill+Goudy|Economica|News+Cycle|Ropa+Sans|Actor|Cuprum|Oswald' rel='stylesheet' type='text/css'>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<title>Clean - One Page Personal Portfolio</title>
+
+	<!-- CSS -->
+	<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/font-awesome.min.css" rel="stylesheet" media="screen">
+	<link href="assets/css/simple-line-icons.css" rel="stylesheet" media="screen">
+	<link href="assets/css/animate.css" rel="stylesheet">
+    
+	<!-- Custom styles CSS -->
+	<link href="assets/css/style.css" rel="stylesheet" media="screen">
+    
+    <script src="assets/js/modernizr.custom.js"></script>
+       
 </head>
 <body>
 
-  <header>
-    <div id="headerbar">
-      <div class="containersize">
-        <div id="home">
-          <a href="index.html">Rosal, Peter</a>
-        </div>
-        <div id="navbar">
-          <nav>
-            <ul>
-              <li><a href="about.html">About</a></li>
-              <li><a href="resume.html">Work</a></li>
-              <li><a href="projects/index.html">Projects</a></li>
-              <li><a href="blog/index.html">Blog</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </nav> 
-        </div>  
-      </div>
-    </div>
-  </header>
-	<div class="space">
-  </div>
-  <div class="content">
-  </div>
-  <figure>
-  	<!--<img id="profile" src="imgs/profile.jpg" alt="Profile Picture" title="Peter Rosal 2015" />-->
-  	<p>
-  		<h3><div id="message"><figcaption>
-  		Hi! I'm Peter, Pete, Petey, Pistol, Petri, Peeta, Pan, and the list goes on.
-  		</figcaption></div>
-      </h3>
-  	</p>		
-  </figure>
-  <section>
-    <h1 id="cohort">New York Mud Turtles 2015</h1>
-    <script src="js/add-content.js"></script>
+	<!-- Preloader -->
+
+	<div id="preloader">
+		<div id="status"></div>
+	</div>
+
+	<!-- Home start -->
+
+	<section id="home" class="pfblock-image screen-height">
+        <div class="home-overlay"></div>
+		<div class="intro">
+			<div class="start">Hello, I am Peter Rosal and I am</div>
+			<h1>Full Stack Web Developer</h1>
+			<div class="start">crafting clean and responsive Web Applications</div>
+		</div>
+
+        <a href="#about">
+		<div class="scroll-down">
+            <span>
+                <i class="fa fa-angle-down fa-2x"></i>
+            </span>
+		</div>
+        </a>
+
+	</section>
+
+	<!-- Home end -->
+
+	<!-- Navigation start -->
+
+	<header class="header">
+
+		<nav class="navbar navbar-custom" role="navigation">
+
+			<div class="container">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#custom-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Peter Rosal</a>
+				</div>
+
+				<div class="collapse navbar-collapse" id="custom-collapse">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Works</a></li>
+                        <li><a href="#skills">Skills</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+
+			</div><!-- .container -->
+
+		</nav>
+
+	</header>
+
+	<!-- Navigation end -->
+
+    <!-- About start -->
+
+	<section id="about" class="pfblock pfblock-gray">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">what I do</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							Finding fresh powder to carve each season, fluid athletes to spar with, well crafted products to acquire, and people with thoughtful insights to share, for the inspiration to create.
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- Services end -->
     
-  </section>
-  
-  <section>
-    <h1><span id="stock"></span><div id="course">Phase 0</div></h1>
+	<!-- Portfolio start -->
+
+	<section id="portfolio" class="pfblock">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header wow fadeInUp">
+						<h2 class="pfblock-title">Projects</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle-black">
+							On the road to becoming a developer I have built a handful of simple applications with the desire to create more with added degrees of complexity incorporating the new skills I pick up along the way.
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+            
+            
+            <div class="row">
+                
+                <a href="https://soap-stone.herokuapp.com/">
+	                <div class="col-xs-12 col-sm-4 col-md-4">
+	                    
+	                    <div class="grid wow zoomIn">
+	                        <figure class="effect-bubba">
+	                            <img src="assets/images/item-1.jpg" alt="img01"/>
+	                            <figcaption>
+	                                <h2>Soap<span>Stone</span></h2>
+	                                <p>Redefining the social experience through geolocation.</p>
+	                            </figcaption>			
+	                        </figure>
+	                    </div>
+	                    
+	                </div>
+                </a>
+
+                <a href="https://github.com/r05al/turtle-overflow">
+	                <div class="col-xs-12 col-sm-4 col-md-4">
+	            
+	                    <div class="grid wow zoomIn">
+	                        <figure class="effect-bubba">
+	                            <img src="assets/images/item-4.jpg" alt="img01"/>
+	                            <figcaption>
+	                                <h2>Turtle <span>Overflow</span></h2>
+	                                <p>Recreating Stack Overflow utilizing Rails and RESTful routes.</p>
+	                            </figcaption>			
+	                        </figure>
+	                    </div>
+	                    
+	                </div>
+                </a>
+
+                <a href="https://github.com/r05al">
+	                <div class="col-xs-12 col-sm-4 col-md-4">
+	            
+	                    <div class="grid wow zoomIn">
+	                        <figure class="effect-bubba">
+	                            <img src="assets/images/item-6.jpg" alt="img01"/>
+	                            <figcaption>
+	                                <h2>The <span>Grind</span></h2>
+	                                <p>Check out my GitHub to see what is in progress...</p>
+	                            </figcaption>			
+	                        </figure>
+	                    </div>
+	                    
+	                </div>
+                </a>
+                
+            </div>
+
+
+		</div><!-- .contaier -->
+
+	</section>
+
+	<!-- Portfolio end -->
     
-    <section><div id="note">
-      <h1>This site will be a work in progress. As I learn more the better and cleaner this will become!</h1></div>
+    <!-- Skills start -->
+    
+    <section class="pfblock pfblock-gray" id="skills">
+		
+			<div class="container">
+			
+				<div class="row skills">
+					
+					<div class="row">
+
+                        <div class="col-sm-6 col-sm-offset-3">
+
+                            <div class="pfblock-header wow fadeInUp">
+                                <h2 class="pfblock-title">My Skills</h2>
+                                <div class="pfblock-line"></div>
+                                <div class="pfblock-subtitle-black">
+                                    Ruby, JavaScript, HTML, CSS, JQuery, Rails, Sinatra, SQL
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div><!-- .row -->
+					
+				</div><!--End row -->
+			
+			</div>
+		
     </section>
-  </section>
-  
-  <section>
-    <h1><span id="name">Phase 1</span> Countdown<span id="shipping"></span></h2>
-    <div id="cost"><img id="clock" src="imgs/clock.jpg" alt="Clock" title="Waiting for the real fun to begin!" /></div>
-    <div id='offerEnds'>Insert timer here</div>
-    <div id="footer"></div>  
-  </section>
-  <script src="js/basic-function.js"></script>
-  <script src="js/numeric-variable.js"></script>
-  <script src="js/string-variable.js"></script>
-  <script src="js/boolean-variable.js"></script>
-  <script src="js/object-literal.js"></script>
-  <script src="js/dates-times.js"></script>
-  <div class="space">
-  </div>
+    
+    <!-- Skills end -->
+
+	<!-- CallToAction start -->
+
+	<section class="calltoaction">
+		<div class="container">
+
+			<div class="row">
+
+				<div class="col-md-12 col-lg-12">
+					<h2 class="wow slideInRight" data-wow-delay=".1s">PUT MY SKILLS TO WORK</h2>
+					<div class="calltoaction-decription wow slideInRight" data-wow-delay=".2s">
+						I'm available for freelance projects.
+					</div>
+				</div>
+
+				<div class="col-md-12 col-lg-12 calltoaction-btn wow slideInRight" data-wow-delay=".3s">
+					<a href="#" class="btn btn-lg">My Resume</a>
+					<a href="#contact" class="btn btn-lg">Contact Me</a>
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- CallToAction end -->
+
+	<!-- Contact start -->
+
+	<section id="contact" class="pfblock">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<div class="pfblock-header">
+						<h2 class="pfblock-title">Let's talk</h2>
+						<div class="pfblock-line"></div>
+						<div class="pfblock-subtitle">
+							Let's grab coffee and discuss how we can collaborate.
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- .row -->
+
+			<div class="row">
+
+				<div class="col-sm-6 col-sm-offset-3">
+
+					<form id="contact-form" role="form">
+						<div class="ajax-hidden">
+							<div class="form-group wow fadeInUp">
+								<label class="sr-only" for="c_name">Name</label>
+								<input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+							</div>
+
+							<div class="form-group wow fadeInUp" data-wow-delay=".1s">
+								<label class="sr-only" for="c_email">Email</label>
+								<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+							</div>
+
+							<div class="form-group wow fadeInUp" data-wow-delay=".2s">
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Message"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-lg btn-block wow fadeInUp" data-wow-delay=".3s">Send Message</button>
+						</div>
+						<div class="ajax-response"></div>
+					</form>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</section>
+
+	<!-- Contact end -->
+
+	<!-- Footer start -->
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-sm-12">
+
+					<ul class="social-links">
+						<li><a href="https://www.instagram.com/x21b/" class="wow fadeInUp"><i class="fa fa-instagram"></i></a></li>
+						<li><a href="https://www.linkedin.com/in/peterrosal" class="wow fadeInUp" data-wow-delay=".2s"><i class="fa fa-linkedin"></i></a></li>
+						<li><a href="https://github.com/r05al" class="wow fadeInUp" data-wow-delay=".4s"><i class="fa fa-github"></i></a></li>
+						<li><a href="mailto:peter.rosal@gmail.com?Subject=Dropping%20a%20line" class="wow fadeInUp" data-wow-delay=".5s"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+
+                    <p class="copyright">
+                        © 2015 Rosal Productions | Images: <a href="https://unsplash.com/">Unsplash</a>
+					</p>
+
+				</div>
+
+			</div><!-- .row -->
+		</div><!-- .container -->
+	</footer>
+
+	<!-- Footer end -->
+
+	<!-- Scroll to top -->
+
+	<div class="scroll-up">
+		<a href="#home"><i class="fa fa-angle-up"></i></a>
+	</div>
+    
+    <!-- Scroll to top end-->
+
+	<!-- Javascript files -->
+
+	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/js/jquery.parallax-1.1.3.js"></script>
+	<script src="assets/js/imagesloaded.pkgd.js"></script>
+	<script src="assets/js/jquery.sticky.js"></script>
+	<script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.easypiechart.js"></script>
+    <script src="assets/js/waypoints.min.js"></script>
+    <script src="assets/js/jquery.cbpQTRotator.js"></script>
+	<script src="assets/js/custom.js"></script>
+
 </body>
-<footer>
-  <div class="containersize">
-    <div id="cp">&copy; 2015 Rosal Productions</div>
-    <div id="footer"></div>
-    <nav id="footersocs">
-      <ul>
-        <li><a href="https://github.com/r05al">GitHub</a></li>
-        <li><a href="https://www.facebook.com/peterosal">Facebook</a></li>
-        <li><a href="https://instagram.com/x21b">Instagram</a></li>
-        <li><a href="https://twitter.com/n01nobody">Twitter</a></li>
-      </ul>
-    </nav>
-
-</footer>
 </html>
-
