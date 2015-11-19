@@ -601,9 +601,13 @@ textarea.form-control {
 }
 
 .navbar-custom .navbar-brand {
-	font-weight: 700;
-	font-size: 18px;
-    font-family: Vollkorn, serif;
+    font: 500 20px/1.2 Raleway, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+
+.navbar-custom .navbar-brand span {
+    font-weight: 800;
 }
 
 .navbar-custom .dropdown-menu {
