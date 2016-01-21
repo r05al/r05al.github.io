@@ -12,11 +12,45 @@
 	$(document).ready(function() {
 
 		/* ---------------------------------------------- /*
+		 * Local Weather
+		/* ---------------------------------------------- */
+
+		getLocation();
+		var siteAppId = "2de143494c0b295cca9337e1e96b00e0";
+
+		function getLocation() {
+			$.get("http://ipinfo.io", function(location) {
+				console.log(location);
+
+				$('.location').html("How's the weather in good old " + location.city + "?");
+
+				getWeather(location.loc);
+			}, "jsonp");
+		}
+
+		function getWeather(loc) {
+			var lat = loc.split(",")[0];
+			var lon = loc.split(",")[1];
+			var singular = ["clear sky", "few clouds"]
+
+			var weatherApiUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" +
+			lat + "&lon=" + lon + "&APPID=" + siteAppId;
+
+			$.get(weatherApiUrl, function(weather) {
+				console.log(weather);
+
+				$(".location").append(" " + weather.weather[0].description + "?");
+
+			}, "jsonp");
+		}
+
+
+		/* ---------------------------------------------- /*
 		 * Smooth scroll / Scroll To Top
 		/* ---------------------------------------------- */
 
 		$('a[href*=#]').bind("click", function(e){
-           
+
 			var anchor = $(this);
 			$('html, body').stop().animate({
 				scrollTop: $(anchor.attr('href')).offset().top
@@ -45,10 +79,10 @@
 			offset: 70
 		})
 
-        
+
         /* ---------------------------------------------- /*
 		 * Skills
-        /* ---------------------------------------------- */    
+        /* ---------------------------------------------- */
         //var color = $('#home').css('backgroundColor');
 
         $('.skills').waypoint(function(){
@@ -64,12 +98,12 @@
                 });
             });
         },{offset:'80%'});
-        
-        
+
+
         /* ---------------------------------------------- /*
 		 * Quote Rotator
 		/* ---------------------------------------------- */
-       
+
 			$( function() {
 				/*
 				- how to call the plugin:
@@ -90,8 +124,8 @@
 				$( '#cbp-qtrotator' ).cbpQTRotator();
 
 			} );
-		
-        
+
+
 		/* ---------------------------------------------- /*
 		 * Home BG
 		/* ---------------------------------------------- */
@@ -140,7 +174,7 @@
 			var c_email = $('#c_email').val();
 			var c_message = $('#c_message ').val();
 			var response = $('#contact-form .ajax-response');
-			
+
 			var formData = {
 				'name'       : c_name,
 				'email'      : c_email,
@@ -155,7 +189,7 @@
 			else {
 					 $.ajax({
 							type        : 'POST', // define the type of HTTP verb we want to use (POST for our form)
-							url         : 'assets/php/contact.php', // the url where we want to POST '//formspree.io/you@email.com' 
+							url         : 'assets/php/contact.php', // the url where we want to POST '//formspree.io/you@email.com'
 							data        : formData, // our data object
 							dataType    : 'json', // what type of data do we expect back from the server
 							encode      : true,
@@ -164,7 +198,7 @@
 											response.html(ret.message).fadeIn(500);
 							}
 						});
-				}           
+				}
             	return false;
 			});
 
