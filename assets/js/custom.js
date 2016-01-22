@@ -16,7 +16,6 @@
 		/* ---------------------------------------------- */
 
 		getLocation();
-		var siteAppId = "2de143494c0b295cca9337e1e96b00e0";
 
 		function getLocation() {
 			$.get("http://ipinfo.io", function(location) {
@@ -24,22 +23,87 @@
 
 				$('.location').html("How's the weather in good old " + location.city + "?");
 
-				getWeather(location.loc);
+				getWeather(location.city, location.region);
 			}, "jsonp");
 		}
 
-		function getWeather(loc) {
-			var lat = loc.split(",")[0];
-			var lon = loc.split(",")[1];
-			var singular = ["clear sky", "few clouds"]
+		function getWeather(city, region) {
+			var city = city; console.log(city);
+			var state = getAbbreviation(region); console.log(state);
 
-			var weatherApiUrl = "http://api.openweathermap.org/data/2.5/weather?lat=" +
-			lat + "&lon=" + lon + "&APPID=" + siteAppId;
+			function getAbbreviation(state) {
+				var usStates = [
+				    { name: 'ALABAMA', abbreviation: 'AL'},
+				    { name: 'ALASKA', abbreviation: 'AK'},
+				    { name: 'AMERICAN SAMOA', abbreviation: 'AS'},
+				    { name: 'ARIZONA', abbreviation: 'AZ'},
+				    { name: 'ARKANSAS', abbreviation: 'AR'},
+				    { name: 'CALIFORNIA', abbreviation: 'CA'},
+				    { name: 'COLORADO', abbreviation: 'CO'},
+				    { name: 'CONNECTICUT', abbreviation: 'CT'},
+				    { name: 'DELAWARE', abbreviation: 'DE'},
+				    { name: 'DISTRICT OF COLUMBIA', abbreviation: 'DC'},
+				    { name: 'FEDERATED STATES OF MICRONESIA', abbreviation: 'FM'},
+				    { name: 'FLORIDA', abbreviation: 'FL'},
+				    { name: 'GEORGIA', abbreviation: 'GA'},
+				    { name: 'GUAM', abbreviation: 'GU'},
+				    { name: 'HAWAII', abbreviation: 'HI'},
+				    { name: 'IDAHO', abbreviation: 'ID'},
+				    { name: 'ILLINOIS', abbreviation: 'IL'},
+				    { name: 'INDIANA', abbreviation: 'IN'},
+				    { name: 'IOWA', abbreviation: 'IA'},
+				    { name: 'KANSAS', abbreviation: 'KS'},
+				    { name: 'KENTUCKY', abbreviation: 'KY'},
+				    { name: 'LOUISIANA', abbreviation: 'LA'},
+				    { name: 'MAINE', abbreviation: 'ME'},
+				    { name: 'MARSHALL ISLANDS', abbreviation: 'MH'},
+				    { name: 'MARYLAND', abbreviation: 'MD'},
+				    { name: 'MASSACHUSETTS', abbreviation: 'MA'},
+				    { name: 'MICHIGAN', abbreviation: 'MI'},
+				    { name: 'MINNESOTA', abbreviation: 'MN'},
+				    { name: 'MISSISSIPPI', abbreviation: 'MS'},
+				    { name: 'MISSOURI', abbreviation: 'MO'},
+				    { name: 'MONTANA', abbreviation: 'MT'},
+				    { name: 'NEBRASKA', abbreviation: 'NE'},
+				    { name: 'NEVADA', abbreviation: 'NV'},
+				    { name: 'NEW HAMPSHIRE', abbreviation: 'NH'},
+				    { name: 'NEW JERSEY', abbreviation: 'NJ'},
+				    { name: 'NEW MEXICO', abbreviation: 'NM'},
+				    { name: 'NEW YORK', abbreviation: 'NY'},
+				    { name: 'NORTH CAROLIN A', abbreviation: 'NC'},
+				    { name: 'NORTH DAKOTA', abbreviation: 'ND'},
+				    { name: 'NORTHERN MARIANA ISLANDS', abbreviation: 'MP'},
+				    { name: 'OHIO', abbreviation: 'OH'},
+				    { name: 'OKLAHOMA', abbreviation: 'OK'},
+				    { name: 'OREGON', abbreviation: 'OR'},
+				    { name: 'PALAU', abbreviation: 'PW'},
+				    { name: 'PENNSYLVANIA', abbreviation: 'PA'},
+				    { name: 'PUERTO RICO', abbreviation: 'PR'},
+				    { name: 'RHODE ISLAND', abbreviation: 'RI'},
+				    { name: 'SOUTH CAROLINA', abbreviation: 'SC'},
+				    { name: 'SOUTH DAKOTA', abbreviation: 'SD'},
+				    { name: 'TENNESSEE', abbreviation: 'TN'},
+				    { name: 'TEXAS', abbreviation: 'TX'},
+				    { name: 'UTAH', abbreviation: 'UT'},
+				    { name: 'VERMONT', abbreviation: 'VT'},
+				    { name: 'VIRGIN ISLANDS', abbreviation: 'VI'},
+				    { name: 'VIRGINIA', abbreviation: 'VA'},
+				    { name: 'WASHINGTON', abbreviation: 'WA'},
+				    { name: 'WEST VIRGINIA', abbreviation: 'WV'},
+				    { name: 'WISCONSIN', abbreviation: 'WI'},
+				    { name: 'WYOMING', abbreviation: 'WY' }
+				];
+				usStates.find(function(obj) {
+					return obj.name === state.toUpperCase();
+				})
+			}
+
+			var weatherApiUrl = "https://query.yahooapis.com/v1/public/yql?q=select%20item.condition.text%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + city + "%2C%20" + state + "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
 
 			$.get(weatherApiUrl, function(weather) {
 				console.log(weather);
-
-				$(".location").append(" " + weather.weather[0].description + "?");
+				debugger;
+				$(".location").append(" " + weather.query.results.channel.item.condition.text + "?");
 
 			}, "jsonp");
 		}
