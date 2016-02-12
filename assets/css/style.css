@@ -313,7 +313,7 @@ textarea.form-control {
     text-align: center;
 }
 .calltoaction {
-    background: url(../images/item-3.jpg);
+    background: url();
 	background-color: #222;
 	background-repeat: no-repeat;
 	background-position: 0 0;
@@ -448,6 +448,26 @@ textarea.form-control {
 			background-size: cover;
 	padding: 150px 0;
 	color: #999;
+}
+
+.modal-header {
+  min-height: 16.43px;
+  padding: 5px;
+  background-color: transparent;
+}
+
+.modal-body {
+  min-height: 16.43px;
+  padding: 5px;
+}
+
+.img-responsive:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gallery {
+	padding: 20px;
+	display: flex
 }
 
 /* ---------------------------------------------- /*
@@ -957,7 +977,7 @@ figure.effect-bubba:hover p {
 
 .cbp-qtrotator .cbp-qtcontent.cbp-qtcurrent,
 .no-js .cbp-qtrotator .cbp-qtcontent {
-	position: relative; 
+	position: relative;
 	z-index: 100;
 	pointer-events: auto;
 	opacity: 1;
@@ -1010,7 +1030,7 @@ figure.effect-bubba:hover p {
 }
 
 /* Example for media query */
-@media screen and (max-width: 30.6em) { 
+@media screen and (max-width: 30.6em) {
 
 	.cbp-qtrotator {
 		font-size: 70%;
