@@ -12,6 +12,15 @@
 	$(document).ready(function() {
 
 		/* ---------------------------------------------- /*
+		 * Lightbox
+		/* ---------------------------------------------- */
+
+		$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+		    event.preventDefault();
+		    $(this).ekkoLightbox();
+		});
+
+		/* ---------------------------------------------- /*
 		 * Local Weather
 		/* ---------------------------------------------- */
 
@@ -19,7 +28,6 @@
 
 		function getLocation() {
 			$.get("http://ipinfo.io", function(location) {
-				console.log(location);
 
 				$('.location').html("How's the weather in good old " + location.city + "?");
 
@@ -28,8 +36,8 @@
 		}
 
 		function getWeather(city, region) {
-			var city = city; console.log(city);
-			var state = getAbbreviation(region); console.log(state);
+			var city = city;
+			var state = getAbbreviation(region);
 
 			function getAbbreviation(state) {
 				var usStates = [
@@ -101,8 +109,7 @@
 			var weatherApiUrl = "https://query.yahooapis.com/v1/public/yql?q=select%20item.condition.text%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22" + city + "%2C%20" + state + "%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
 
 			$.get(weatherApiUrl, function(weather) {
-				console.log(weather);
-				debugger;
+
 				$(".location").append(" " + weather.query.results.channel.item.condition.text + "?");
 
 			}, "jsonp");
