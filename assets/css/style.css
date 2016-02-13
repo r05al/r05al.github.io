@@ -466,8 +466,20 @@ textarea.form-control {
 }
 
 .gallery {
-	padding: 20px;
-	display: flex
+	padding: 0 20px 0 20px;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.thumb {
+	padding: 10px;
+	margin: auto;
+	width: 200px;
+
 }
 
 /* ---------------------------------------------- /*
@@ -760,6 +772,10 @@ textarea.form-control {
 
 	.calltoaction {
 		text-align: center;
+	}
+
+	.gallery {
+		flex-wrap: wrap;
 	}
 
 }
