@@ -297,6 +297,7 @@ textarea.form-control {
 	font-style: normal;
 	font-size: 18px;
 	color: #ecf0f1;
+	text-shadow: 2px 2px 4px #000000;
 }
 
 .pfblock-line {
@@ -438,10 +439,10 @@ textarea.form-control {
 #about {
 	background: url(../images/about.jpeg);
 	background-color: #222;
-	/*background-attachment: fixed;*/
+	background-attachment: fixed;
 	background-repeat: no-repeat;
 
-	background-position: 0 0;
+	background-position: 50% 50%;
 	-webkit-background-size: cover;
 	   -moz-background-size: cover;
 		 -o-background-size: cover;
@@ -461,8 +462,11 @@ textarea.form-control {
   padding: 5px;
 }
 
-.img-responsive:hover {
+.thumb:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-filter: none;
+  filter: none;
+  padding: 0;
 }
 
 .gallery {
@@ -479,7 +483,8 @@ textarea.form-control {
 	padding: 10px;
 	margin: auto;
 	width: 200px;
-
+  -webkit-filter: blur(1px);
+  filter: blur(1px);
 }
 
 /* ---------------------------------------------- /*
@@ -629,7 +634,8 @@ textarea.form-control {
 .navbar-custom .navbar-nav > li.active a {
 	background: none;
 	outline: 0;
-	color: #E7746F;
+	/*color: #E7746F;*/
+	color: #27ae60;
 }
 
 .navbar-custom .navbar-brand {
